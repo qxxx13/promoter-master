@@ -1,4 +1,4 @@
-import { Button } from '@mui/joy';
+import { Button, Typography } from '@mui/joy';
 import { useEffect } from 'react';
 
 export const MainPage = () => {
@@ -6,11 +6,14 @@ export const MainPage = () => {
         Telegram.WebApp.close();
     };
 
-    console.log(Telegram.WebApp.initData);
-
     useEffect(() => {
         Telegram.WebApp.ready();
     }, []);
 
-    return <Button onClick={onClose}>Close</Button>;
+    return (
+        <>
+            <Button onClick={onClose}>Close</Button>;
+            <Typography level="h3">{Telegram.WebApp.initDataUnsafe.user?.usernames}</Typography>
+        </>
+    );
 };
