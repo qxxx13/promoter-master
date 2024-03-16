@@ -14,7 +14,7 @@ export const MainPage = () => {
         <Stack>
             <Button onClick={onClose}>Close</Button>
             <Typography level="h3" color="primary">
-                {Telegram.WebApp.initDataUnsafe.user?.usernames}
+                {Telegram.WebApp.initDataUnsafe.user?.id}
             </Typography>
         </Stack>
     );
