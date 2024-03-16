@@ -1,19 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-function App() {
-    const onClose = () => {
-        Telegram.WebApp.close();
-    };
+import { MainPage } from './components/MainPage/MainPage';
 
-    useEffect(() => {
-        Telegram.WebApp.ready();
-    }, []);
-
-    return (
-        <div>
-            <button onClick={onClose}>Закрыть</button>
-        </div>
-    );
-}
-
-export default App;
+export const App = () => {
+    return <MainPage />;
+};
