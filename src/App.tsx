@@ -1,7 +1,12 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
-import { MainPage } from './components/MainPage/MainPage';
+import { AppRouter } from './router/AppRouter';
 
 export const App = () => {
-    return <MainPage />;
+    return (
+        <BrowserRouter>
+            <AppRouter />
+        </BrowserRouter>
+    );
 };

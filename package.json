@@ -15,6 +15,10 @@
         "react-dom": "17.0.2"
     },
     "devDependencies": {
+        "@emotion/react": "^11.11.4",
+        "@emotion/styled": "^11.11.0",
+        "@fontsource/inter": "^5.0.17",
+        "@mui/joy": "^5.0.0-beta.31",
         "@types/react": "17.0.38",
         "@types/react-dom": "17.0.11",
         "@typescript-eslint/eslint-plugin": "5.10.2",
@@ -29,6 +33,7 @@
         "eslint-plugin-simple-import-sort": "7.0.0",
         "pre-commit": "1.2.2",
         "prettier": "2.5.1",
+        "react-router-dom": "^6.22.3",
         "telegram-webapps-types": "^1.0.5",
         "typescript": "4.5.5",
         "vite": "2.9.12"
