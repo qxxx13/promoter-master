@@ -13,7 +13,9 @@ export const MainPage = () => {
     return (
         <Stack>
             <Button onClick={onClose}>Close</Button>
-            <Typography level="h3">{Telegram.WebApp.initDataUnsafe.user?.usernames}</Typography>
+            <Typography level="h3" color="primary">
+                {Telegram.WebApp.initDataUnsafe.user?.first_name}
+            </Typography>
         </Stack>
     );
 };
