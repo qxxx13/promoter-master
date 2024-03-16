@@ -1,4 +1,4 @@
-import { Button, Typography } from '@mui/joy';
+import { Button, Stack, Typography } from '@mui/joy';
 import { useEffect } from 'react';
 
 export const MainPage = () => {
@@ -11,9 +11,9 @@ export const MainPage = () => {
     }, []);
 
     return (
-        <>
-            <Button onClick={onClose}>Close</Button>;
+        <Stack>
+            <Button onClick={onClose}>Close</Button>
             <Typography level="h3">{Telegram.WebApp.initDataUnsafe.user?.usernames}</Typography>
-        </>
+        </Stack>
     );
 };
