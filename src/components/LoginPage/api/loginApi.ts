@@ -3,7 +3,7 @@ import { LoginedUserType } from '../../../types/UserType';
 
 export const loginByTgId = async (loginData: { telegramId: string; password: string }) => {
     const user: LoginedUserType = await instance
-        .post('/auth/login', loginData)
+        .post('/auth/loginByTgId', loginData)
         .then((res) => res.data)
         .catch((error) => console.log(error));
 
