@@ -12,10 +12,7 @@ export const MainPage = () => {
 
     return (
         <Stack>
-            <Button onClick={onClose}>Close</Button>
-            <Typography level="h3" color="primary">
-                {Telegram.WebApp.initDataUnsafe.user?.id}
-            </Typography>
+            <Typography level="h3">Мои маршруты</Typography>
         </Stack>
     );
 };
