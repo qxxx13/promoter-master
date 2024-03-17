@@ -1,9 +1,9 @@
 import { instance } from '../../../common/apiConfig';
 import { LoginedUserType } from '../../../types/UserType';
 
-export const loginByTgId = async (loginData: { telegramId: string; password: string }) => {
+export const login = async (loginData: { telegramId: string; username: string; password: string }) => {
     const user: LoginedUserType = await instance
-        .post('/auth/loginByTgId', loginData)
+        .post('/auth/login', loginData)
         .then((res) => res.data)
         .catch((error) => console.log(error));
 

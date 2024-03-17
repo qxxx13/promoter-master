@@ -1,7 +1,8 @@
 import { Button, Stack, Typography } from '@mui/joy';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export const MainPage = () => {
+    const [currentUser, setCurrentUser] = useState();
     const onClose = () => {
         Telegram.WebApp.close();
     };
@@ -11,8 +12,9 @@ export const MainPage = () => {
     }, []);
 
     return (
-        <Stack>
-            <Typography level="h3">Мои маршруты</Typography>
+        <Stack alignItems="center" sx={{ p: 2 }}>
+            <Typography level="h1">Мои маршруты</Typography>
+            <Button onClick={() => localStorage.clear()}>Выход</Button>
         </Stack>
     );
 };

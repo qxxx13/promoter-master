@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 
-import { loginByTgId } from './api/loginApi';
+import { login } from './api/loginApi';
 
 export const LoginPage = () => {
     const {
@@ -16,7 +16,11 @@ export const LoginPage = () => {
     const navigate = useNavigate();
 
     const handleLogin = async (data: { password: string }) => {
-        await loginByTgId({ telegramId: String(Telegram.WebApp.initDataUnsafe.user?.id), password: data.password });
+        await login({
+            telegramId: String(Telegram.WebApp.initDataUnsafe.user?.id),
+            username: '',
+            password: data.password,
+        });
 
         navigate('/');
     };
